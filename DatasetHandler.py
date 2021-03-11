@@ -55,7 +55,7 @@ class DatasetHandler:
         return images[0:train_size], labels[0:train_size, ...], images[train_size:train_size+val_size], labels[train_size:train_size+val_size, ...]
     
     # Data genertor: given images paths and images labels yield a batch of images and labels
-    def data_loader(self, imgs_path, imgs_label, batch_size = 16, img_shape = (64, 64, 3), n_classes = 2):
+    def cnn_data_loader(self, imgs_path, imgs_label, batch_size = 16, img_shape = (64, 64, 3), n_classes = 2):
         # Initialize the vectors to be yield
         batch_in = np.zeros((batch_size, img_shape[0], img_shape[1], img_shape[2]))
         batch_out = np.zeros((batch_size, n_classes))
