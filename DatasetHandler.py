@@ -55,7 +55,7 @@ class DatasetHandler:
         return images[0:train_size], labels[0:train_size, ...], images[train_size:train_size+val_size], labels[train_size:train_size+val_size, ...]
     
     # Data genertor: given images paths and images labels yield a batch of images and labels
-    def cnn_data_loader(self, imgs_path, imgs_label, batch_size = 16, img_shape = (64, 64, 3), n_classes = 2):
+    def data_loader(self, imgs_path, imgs_label, batch_size = 16, img_shape = (64, 64, 3), n_classes = 2):
         # Initialize the vectors to be yield
         batch_in = np.zeros((batch_size, img_shape[0], img_shape[1], img_shape[2]))
         batch_out = np.zeros((batch_size, n_classes))
@@ -76,8 +76,7 @@ class DatasetHandler:
     # Data genertor: given images paths and images labels yield a batch of images and labels
     def qcnn_data_loader(self, imgs_path, imgs_label, batch_size = 1, img_shape = (64, 64, 3)):
         # Initialize the vectors to be yield
-        #batch_in = np.zeros((batch_size, img_shape[0], img_shape[1], img_shape[2]))
-        batch_in = np.zeros((batch_size, img_shape[2], 64, 64))
+        batch_in = np.zeros((batch_size, img_shape[2], img_shape[0], img_shape[1]))
         batch_out = np.zeros((batch_size))
 
         # Repeat until the generator will be stopped
@@ -87,12 +86,7 @@ class DatasetHandler:
                 # Select a random image and labels from the dataset
                 index = random.randint(0, len(imgs_path)-1)
                 # Fill the vectors with images and labels
-
-                rgb_img = plt.imread(imgs_path[index])/255.0
-                batch_in[i,  0, ...] = rgb_img[:,:,0]
-                batch_in[i,  1, ...] = rgb_img[:,:,1]
-                batch_in[i,  2, ...] = rgb_img[:,:,2]
-
+                batch_in[i, ...] = np.transpose(plt.imread(imgs_path[index])/255.0)
                 batch_out[i] = np.argmax(imgs_label[index])
             # Yield/Return the image and labeld vectors
             yield  torch.Tensor(batch_in),  torch.Tensor(batch_out).type(torch.LongTensor)
