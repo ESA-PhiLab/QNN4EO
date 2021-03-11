@@ -142,7 +142,7 @@ class QCNN_Classifier(nn.Module):
                 self.optimizer.step()
                 
                 total_loss.append(loss.item())
-                #print('\r Image '+str(i+1)+' of ' + str(len_train_images) + ' Loss: ' + str(loss.item()), end='')
+                print('\r Image '+str(i+1)+' of ' + str(len_train_images) + ' Loss: %.5f' % loss.item(), end='')
             
             loss_list.append(sum(total_loss)/len(total_loss))
             print(' ->  Training [{:.0f}%]\tLoss: {:.4f}'.format(100. * (epoch + 1) / epochs, loss_list[-1]))
@@ -169,7 +169,7 @@ class QCNN_Classifier(nn.Module):
                 pred = output.argmax(dim=1, keepdim=True)
 
                 predictions.append(pred.item())
-                ground_truth.append(target)
+                ground_truth.append(target.item())
 
                 #correct += pred.eq(target.view_as(pred)).sum().item()
 
