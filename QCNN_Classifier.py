@@ -1,13 +1,14 @@
-import torch
-from torch.autograd import Function
 from torchvision import datasets, transforms
+from sklearn.metrics import confusion_matrix
+from torch.autograd import Function
+from qiskit.visualization import *
+import torch.nn.functional as F
 import torch.optim as optim
 import torch.nn as nn
-import torch.nn.functional as F
-
-import qiskit
 import numpy as np
-from qiskit.visualization import *
+import qiskit
+import torch
+
 
 class QuantumCircuit:
     """ 
@@ -148,29 +149,55 @@ class QCNN_Classifier(nn.Module):
         
         return loss_list
 
-    def evalute_model(self, val_data_generator, len_val_images):
+    def evaluate_model(self, val_data_generator, len_val_images):
         total_loss = []
         gen = iter(val_data_generator)
+
+        predictions = []
+        ground_truth = []
+
         
         self.eval()
         loss_func = self.loss_function
         with torch.no_grad():
             correct = 0
-            for i in range(len(val_images)):
+            for i in range(len_val_images):
 
                 (data, target) = next(gen)
-                output = qcnn(data)
+                output = self.forward(data)
                 
                 pred = output.argmax(dim=1, keepdim=True)
-                correct += pred.eq(target.view_as(pred)).sum().item()
 
-                loss = loss_func(output, target)
-                total_loss.append(loss.item())
+                predictions.append(pred.item())
+                ground_truth.append(target)
 
-            print('\n Performance on test data:\n\tLoss: {:.4f}\n\tAccuracy: {:.1f}%'.format(
-                sum(total_loss) / len(total_loss),
-                correct / len(val_images) * 100)
-                )
+                #correct += pred.eq(target.view_as(pred)).sum().item()
+
+                #loss = loss_func(output, target)
+                #total_loss.append(loss.item())
+
+            #print('\n Performance on test data:\n\tLoss: {:.4f}\n\tAccuracy: {:.1f}%'.format(
+            #    sum(total_loss) / len(total_loss),
+            #    correct / len(val_images) * 100)
+            #    )
+            predictions = np.array(predictions)
+            ground_truth = np.array(ground_truth)
+
+            cm = confusion_matrix(predictions, ground_truth)
+
+            # correct predictions / samples * 100
+            accuracy = (cm[0,0] + cm[1,1]) / sum(sum(cm)) * 100
+            # true_positive/true_positive+False_positive
+            precision = (cm[0,0] + cm[1,1])/((cm[0,0] + cm[1,1])+cm[0,1]) * 100
+            # true_positive/true_positive+False_negative
+            recall = (cm[0,0] + cm[1,1])/((cm[0,0] + cm[1,1])+cm[1,0]) * 100
+            # 2 * (precision * recall) /(precsion+recall)
+            f1 = 2 * (precision * recall)/(precision+recall) 
+
+            print('Accuracy: %.2f %%' % accuracy)
+            print('Precion: %.2f %%' % precision)
+            print('Recall: %.2f %%' % recall)
+            print('F1 score: %.2f %%' % f1)
 
                 
                 
