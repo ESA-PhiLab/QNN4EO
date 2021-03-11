@@ -2,6 +2,8 @@ from tensorflow.keras.layers import Dense, Dropout, Conv2D, Activation, Flatten,
 from tensorflow.keras.callbacks import EarlyStopping
 from tensorflow.keras.models import Sequential 
 from tensorflow.keras.optimizers import Adam
+from sklearn.metrics import confusion_matrix
+from utils import reverseOneHotEncoding
 from time import time
 
 class CNN_Classifier:
@@ -56,3 +58,26 @@ class CNN_Classifier:
         print('Training time: ', elapsed_time)
 
         return history
+
+    def evaluate_model(self, val_data_generator, classes_name):
+        x_train, y_train = next(iter(val_data_generator))
+        pred = self.model.predict(x_train)
+
+        pl = reverseOneHotEncoding(pred, classes_name)
+        cl = reverseOneHotEncoding(y_train, classes_name)
+
+        cm = confusion_matrix(pl, cl)
+
+        # correct predictions / samples * 100
+        accuracy = (cm[0,0] + cm[1,1]) / sum(sum(cm)) * 100
+        # true_positive/true_positive+False_positive
+        precision = (cm[0,0] + cm[1,1])/((cm[0,0] + cm[1,1])+cm[0,1]) * 100
+        # true_positive/true_positive+False_negative
+        recall = (cm[0,0] + cm[1,1])/((cm[0,0] + cm[1,1])+cm[1,0]) * 100
+        # 2 * (precision * recall) /(precsion+recall)
+        f1 = 2 * (precision * recall)/(precision+recall) 
+
+        print('Accuracy: %.2f %%' % accuracy)
+        print('Precion: %.2f %%' % precision)
+        print('Recall: %.2f %%' % recall)
+        print('F1 score: %.2f %%' % f1)
