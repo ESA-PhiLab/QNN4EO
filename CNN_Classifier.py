@@ -81,3 +81,5 @@ class CNN_Classifier:
         print('Precion: %.2f %%' % precision)
         print('Recall: %.2f %%' % recall)
         print('F1 score: %.2f %%' % f1)
+
+        return accuracy, precision, recall, f1
