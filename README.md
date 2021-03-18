@@ -9,9 +9,9 @@ Authors:
 
 ### Installation
 
-This module has been implemented in ![Python 3.6.8](https://www.python.org/downloads/release/python-368/).
+This module has been implemented in [Python 3.6.8](https://www.python.org/downloads/release/python-368/).
 
-After the installation of Python and ![pip](https://pypi.org/project/pip/), you can clone this repository in your working directory.
+After the installation of Python and [pip](https://pypi.org/project/pip/), you can clone this repository in your working directory.
 
 Then you can create a virtual environment:
 1. open your favourite terminal and navigate into your working directory
