@@ -13,7 +13,7 @@ class CNN_Classifier:
         self.n_classes = n_classes
 
         self.model = self.define_model()
-        self.model.compile(optimizer=Adam(lr=0.0001), loss='binary_crossentropy', metrics=['accuracy'])
+        self.model.compile(optimizer=Adam(lr=0.00001), loss='binary_crossentropy', metrics=['accuracy'])
 
     def define_model(self):
         kernel_size = 5 

@@ -106,7 +106,7 @@ class QCNN_Classifier(nn.Module):
         self.hybrid = Hybrid(qiskit.Aer.get_backend('qasm_simulator'), 100, np.pi / 2)
 
         self.loss_function = nn.NLLLoss()
-        self.optimizer = optim.Adam(self.parameters(), lr = 0.0001)
+        self.optimizer = optim.Adam(self.parameters(), lr = 0.00001)
 
     def forward(self, x):
         x = F.relu(self.conv1(x))
