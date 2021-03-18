@@ -145,7 +145,7 @@ class QNN4EO(nn.Module):
                 print('\rImage '+str(i+1)+' of ' + str(len_train_images) + ' Loss: %.5f' % loss.item(), end='')
             
             loss_list.append(sum(total_loss)/len(total_loss))
-            print(' ->  Training [{:.0f}%]\tLoss: {:.4f}'.format(100. * (epoch + 1) / epochs, loss_list[-1]))
+            print(' ->  Training [{:.0f}%]\tEpoch Loss: {:.4f}'.format(100. * (epoch + 1) / epochs, loss_list[-1]))
         
         return loss_list
 
