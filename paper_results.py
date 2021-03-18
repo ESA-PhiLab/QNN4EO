@@ -26,6 +26,6 @@ def import_results():
     [97.8,	82.7,	99.3,	98.2,	87.4,	93.9,	89.4,	98.9,	np.nan,	75.0],
     [95.3,	87.5,	97.9,	97.4,	94.3,	92.2,	96.0,	98.0,	75.0,	np.nan]])
 
-    classes_name = np.array(["Residential", "Highway", "Sea Lake", "Industrial", "Annual Crop", "River", "Pasture",	"Forest", "Permanent Crop", "Herbaceous Vegetation"])
+    classes_name = np.array(["Residential", "Highway", "SeaLake", "Industrial", "Annual\nCrop", "River", "Pasture",	"Forest", "Permanent\nCrop", "Herbaceous\nVegetation"])
 
     return cnn_results, qnn4eo_results, classes_name
