@@ -1,11 +1,15 @@
 # QNN4O: a quantum convolutional neural network for satellite data classification
 
 Authors:
-* Daniela A. Zaidenberg (MIT)[<img align="right" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_daniela]
-* Alessandro Sebastianelli (Univeristy of Sannio/ESA OSIP)[<img align="right" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_alessandro]
-* Dario Spiller (ASI/ESA)[<img align="right" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_dario]
-* Bertrand Le Saux (ESA)[<img align="right" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_bertand]
-* Silvia L. Ullo (University of Sannio)[<img align="right" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_silvia]
+* Daniela A. Zaidenberg (MIT) [<img align="center" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/> ][linkedin_daniela] 
+
+* Alessandro Sebastianelli (Univeristy of Sannio/ESA OSIP)[<img align="center" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_alessandro][<img align="center" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"/>][github_alessandro]
+
+* Dario Spiller (ASI/ESA)[<img align="center" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_dario][<img align="center" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"/>][github_dario]
+
+* Bertrand Le Saux (ESA)[<img align="center" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_bertrand][<img align="center" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"/>][github_bertrand]
+
+* Silvia L. Ullo (University of Sannio)[<img align="center" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_silvia]
 
 
 
@@ -24,7 +28,8 @@ Then you can create a virtual environment:
     - Linux/MacOS: `source qnn4eo\bin\activate`
     - Windows: `qnn4eo/Scripts/activate`
 5. install requirements: `pip install -r requirements.txt`
-6. launch Jupyter Lab and open EuroSAT_Classification.ipynb: `jupyter lab`
+6. launch Jupyter Lab: `jupyter lab`
+7. open EuroSAT_Classification.ipynb
 
 
 
@@ -34,6 +39,9 @@ Then you can create a virtual environment:
 
 [linkedin_daniela]: https://www.linkedin.com/in/daniela-zaidenberg-1b9918196/
 [linkedin_alessandro]: https://www.linkedin.com/in/alessandro-sebastianelli-58545915b/
+[github_alessandro]: https://github.com/Sebbyraft
 [linkedin_dario]: https://www.linkedin.com/in/phd-dario-spiller/
+[github_dario]: https://github.com/DarioSpiller
 [linkedin_bertrand]: https://www.linkedin.com/in/bertrand-le-saux-4127b785/
+[github_bertrand]: https://github.com/blesaux
 [linkedin_silvia]: https://www.linkedin.com/in/silvia-liberata-ullo-67280717/
