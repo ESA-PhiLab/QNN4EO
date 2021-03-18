@@ -5,6 +5,7 @@ from tensorflow.keras.optimizers import Adam
 from sklearn.metrics import confusion_matrix
 from utils import reverseOneHotEncoding
 from time import time
+import numpy as np
 
 class CNN_Classifier:
 
@@ -55,7 +56,7 @@ class CNN_Classifier:
                             )
 
         elapsed_time = time() - init
-        print('Training time: ', elapsed_time)
+        #print('Training time: ', elapsed_time)
 
         return history
 

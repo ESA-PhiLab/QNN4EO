@@ -95,9 +95,9 @@ class Hybrid(nn.Module):
     def forward(self, input):
         return HybridFunction.apply(input, self.quantum_circuit, self.shift)
 
-class QCNN_Classifier(nn.Module):
+class QNN4EO(nn.Module):
     def __init__(self):
-        super(QCNN_Classifier, self).__init__()
+        super(QNN4EO, self).__init__()
         self.conv1 = nn.Conv2d(3, 6, kernel_size=5)
         self.conv2 = nn.Conv2d(6, 16, kernel_size=5)
         self.dropout = nn.Dropout2d()
@@ -142,7 +142,7 @@ class QCNN_Classifier(nn.Module):
                 self.optimizer.step()
                 
                 total_loss.append(loss.item())
-                print('\r Image '+str(i+1)+' of ' + str(len_train_images) + ' Loss: %.5f' % loss.item(), end='')
+                print('\rImage '+str(i+1)+' of ' + str(len_train_images) + ' Loss: %.5f' % loss.item(), end='')
             
             loss_list.append(sum(total_loss)/len(total_loss))
             print(' ->  Training [{:.0f}%]\tLoss: {:.4f}'.format(100. * (epoch + 1) / epochs, loss_list[-1]))
@@ -156,7 +156,6 @@ class QCNN_Classifier(nn.Module):
         predictions = []
         ground_truth = []
 
-        
         self.eval()
         loss_func = self.loss_function
         with torch.no_grad():
