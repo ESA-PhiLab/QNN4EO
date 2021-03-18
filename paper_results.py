@@ -1,7 +1,6 @@
 import numpy as np
 
 def import_results():
-        # Load the tests (see the paper)
     cnn_results = np.array([
     [np.nan,	95.1,	99.3,	94.1,	99.3,	98.8,	98.6,	98.8,	96.5,	95.2],
     [95.1,	np.nan,	95.7,	94.5,	89.9,	78.2,	92.4,	99.0,	77.0,	86.6],
