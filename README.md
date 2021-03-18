@@ -1,11 +1,14 @@
 # QNN4O: a quantum convolutional neural network for satellite data classification
 
 Authors:
-* Daniela A. Zaidenberg (MIT)
-* Alessandro Sebastianelli (Univeristy of Sannio/ESA OSIP)
-* Dario Spiller (ASI/ESA)
-* Bertrand Le Saux (ESA)
-* Silvia L. Ullo (University of Sannio)
+* Daniela A. Zaidenberg (MIT)[<img align="right" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_daniela]
+* Alessandro Sebastianelli (Univeristy of Sannio/ESA OSIP)[<img align="right" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_alessandro]
+* Dario Spiller (ASI/ESA)[<img align="right" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_dario]
+* Bertrand Le Saux (ESA)[<img align="right" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_bertand]
+* Silvia L. Ullo (University of Sannio)[<img align="right" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_silvia]
+
+
+
 
 ### Installation
 
@@ -29,3 +32,8 @@ Then you can create a virtual environment:
 
 ![](imgs/qnnVScnn.png)
 
+[linkedin_daniela]: https://www.linkedin.com/in/daniela-zaidenberg-1b9918196/
+[linkedin_alessandro]: https://www.linkedin.com/in/alessandro-sebastianelli-58545915b/
+[linkedin_dario]: https://www.linkedin.com/in/phd-dario-spiller/
+[linkedin_bertrand]: https://www.linkedin.com/in/bertrand-le-saux-4127b785/
+[linkedin_silvia]: https://www.linkedin.com/in/silvia-liberata-ullo-67280717/
