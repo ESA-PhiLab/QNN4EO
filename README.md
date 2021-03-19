@@ -11,9 +11,6 @@ Authors:
 
 * Silvia L. Ullo (University of Sannio) [<img align="center" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_silvia]
 
-
-
-
 ### Installation
 
 This module has been implemented in [Python 3.6.8](https://www.python.org/downloads/release/python-368/).
@@ -36,6 +33,17 @@ Then you can create a virtual environment:
 ## Some results
 
 ![](imgs/qnnVScnn.png)
+
+
+#### Cite our paper
+
+        @inproceedings{zaidenberg2021advantages,
+            title={Advantages and Bottlenecks of Quantum Machine Learning for Remote Sensing},
+            author={D. A. Zaidenberg, A. Sebastianelli, D. Spiller, B. Le Saux, S.L. Ullo},
+            booktitle={Submitted to IGARSS 2021-2021 IEEE International Geoscience and Remote Sensing Symposium},
+            year={2021},
+            organization={IEEE}
+        }
 
 [linkedin_daniela]: https://www.linkedin.com/in/daniela-zaidenberg-1b9918196/
 [linkedin_alessandro]: https://www.linkedin.com/in/alessandro-sebastianelli-58545915b/
