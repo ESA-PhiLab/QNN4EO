@@ -9,13 +9,12 @@ import numpy as np
 import qiskit
 import torch
 
-
 class QuantumCircuit:
     """ 
     This class provides a simple interface for interaction 
     with the quantum circuit 
     """
-    
+
     def __init__(self, n_qubits, backend, shots):
         # --- Circuit definition ---
         self._circuit = qiskit.QuantumCircuit(n_qubits)
@@ -199,13 +198,3 @@ class QNN4EO(nn.Module):
             print('F1 score: %.2f %%' % f1)
 
             return accuracy, precision, recall, f1
-
-                
-                
-                
-                
-                
-
-
-
-    
