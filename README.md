@@ -25,11 +25,11 @@ Then you can create a virtual environment:
 2. install the *virtualenv* command: `pip install virtualenv`
 3. create a virtualenv: `virtualenv qnn4eo -p python3.6`
 4. activate the virtualenv: 
-    - Linux/MacOS: `source qnn4eo\bin\activate`
+    - Linux or MacOS: `source qnn4eo\bin\activate`
     - Windows: `qnn4eo/Scripts/activate`
 5. install requirements: `pip install -r requirements.txt`
 6. launch Jupyter Lab: `jupyter lab`
-7. open EuroSAT_Classification.ipynb
+7. open *EuroSAT_Classification.ipynb*
 
 
 
