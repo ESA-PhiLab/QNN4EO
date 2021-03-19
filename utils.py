@@ -27,10 +27,10 @@ def plotDataset(images, labels, classes, columns, rows):
     plt.show()
 
 def plotCNNhistory(history):
-    fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(18, 5))
-
     x = np.arange(0, len(history.history['accuracy']))
-
+    
+    fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(18, 5))
+    
     axes[0].plot(x, history.history['accuracy'], '-*')
     axes[0].plot(x, history.history['val_accuracy'], '-o')
     axes[0].legend(['Training Accuracy', 'Validation Accuracy'], fontsize = 14)
