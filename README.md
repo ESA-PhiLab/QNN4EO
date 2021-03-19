@@ -21,7 +21,7 @@ This module has been implemented in [Python 3.6.8](https://www.python.org/downlo
 After the installation of Python and [pip](https://pypi.org/project/pip/), you can clone this repository in your working directory.
 
 Then you can create a virtual environment:
-1. open your favourite terminal and navigate into your working directory
+1. open your favorite terminal and navigate into your working directory
 2. install the *virtualenv* command: `pip install virtualenv`
 3. create a virtualenv: `virtualenv qnn4eo -p python3.6`
 4. activate the virtualenv: 
