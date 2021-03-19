@@ -3,13 +3,13 @@
 Authors:
 * Daniela A. Zaidenberg (MIT) [<img align="center" alt="codeSTACKr | LinkedIn" width="22px" padding="0px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/> ][linkedin_daniela] 
 
-* Alessandro Sebastianelli (Univeristy of Sannio/ESA OSIP)[<img align="center" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_alessandro][<img align="center" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"/>][github_alessandro]
+* Alessandro Sebastianelli (Univeristy of Sannio/ESA OSIP) [<img align="center" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_alessandro] [<img align="center" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"/>][github_alessandro]
 
-* Dario Spiller (ASI/ESA)[<img align="center" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_dario][<img align="center" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"/>][github_dario]
+* Dario Spiller (ASI/ESA) [<img align="center" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_dario] [<img align="center" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"/>][github_dario]
 
-* Bertrand Le Saux (ESA)[<img align="center" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_bertrand][<img align="center" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"/>][github_bertrand]
+* Bertrand Le Saux (ESA) [<img align="center" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_bertrand] [<img align="center" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"/>][github_bertrand]
 
-* Silvia L. Ullo (University of Sannio)[<img align="center" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_silvia]
+* Silvia L. Ullo (University of Sannio) [<img align="center" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_silvia]
 
 
 
