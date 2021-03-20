@@ -55,7 +55,7 @@ class CNN_Classifier:
                                 callbacks=[es],
                             )
 
-        elapsed_time = time() - init
+        #elapsed_time = time() - init
         #print('Training time: ', elapsed_time)
 
         return history
@@ -84,3 +84,9 @@ class CNN_Classifier:
         print('F1 score: %.2f %%' % f1)
 
         return accuracy, precision, recall, f1
+    
+    def evaluate_model_2(self, val_data_generator, classes_name):
+        x_train, y_train = next(iter(val_data_generator))
+        pred = self.model.predict(x_train)
+
+        return x_train, y_train, pred
