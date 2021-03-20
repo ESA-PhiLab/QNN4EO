@@ -46,7 +46,7 @@ class CNN_Classifier:
     def train_model(self,  epochs, batch_size, train_data_generator, val_data_generator, train_dataset_len, val_dataset_len):
         es = EarlyStopping(monitor='val_loss', min_delta=0, patience=3, verbose=0, mode='auto', baseline=None, restore_best_weights=False)
         
-        init = time()
+        #init = time()
         history = self.model.fit(train_data_generator,
                                 steps_per_epoch = train_dataset_len//batch_size,
                                 epochs=epochs,
