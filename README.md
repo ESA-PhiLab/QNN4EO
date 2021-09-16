@@ -9,8 +9,7 @@ In this study we proposed an Hybrid Quantum Convolutional Neural Network to addr
 ## Hybrid Quantum Neural Network
 To create an hybrid QNN, a parametrized quantum circuit is typically used as a hidden layer for the neural network. A parametrized quantum circuit is a quantum circuit where the rotation angles for each gate are specified by the components of a classical input vector. The outputs from our neural network's previous layer will be collected and used as the inputs for our parametrized circuit. The measurement statistics of our quantum circuit can then be collected and used as inputs for the following hidden layer.
 
-
-<center><img src="imgs/interface.png" alt="drawing" width="300"/></center>
+![](imgs/interface.png)
 
 
 In this study we created an Hybird Convolutional Neural Network, by adding a Quantum Circuit in a modified version of the Lenet-5
