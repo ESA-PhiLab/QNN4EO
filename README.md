@@ -1,17 +1,63 @@
 # QNN4O: a quantum convolutional neural network for satellite data classification
 
-Authors:
-* Daniela A. Zaidenberg (MIT) [<img align="center" alt="codeSTACKr | LinkedIn" width="22px" padding="0px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/> ][linkedin_daniela] 
+In this study we proposed an Hybrid Quantum Convolutional Neural Network to address the LULC (Land Use and Land Cover classification) challenge. We trained and test our model on the [EuroSAT dataset](https://github.com/phelber/EuroSAT) based on Sentinel-2 satellite images covering 13 spectral bands and consisting out of 10 classes with in total 27,000 labeled and geo-referenced images.
 
-* Alessandro Sebastianelli (Univeristy of Sannio/ESA OSIP) [<img align="center" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_alessandro] [<img align="center" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"/>][github_alessandro]
+![](https://raw.githubusercontent.com/phelber/EuroSAT/master/eurosat_overview_small.jpg)
+*Sample of EuroSAT dataset [Source https://github.com/phelber/EuroSAT]*
 
-* Dario Spiller (ASI/ESA) [<img align="center" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_dario] [<img align="center" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"/>][github_dario]
 
-* Bertrand Le Saux (ESA) [<img align="center" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_bertrand] [<img align="center" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"/>][github_bertrand]
+## Hybrid Quantum Neural Network
+To create an hybrid QNN, a parametrized quantum circuit is typically used as a hidden layer for the neural network. A parametrized quantum circuit is a quantum circuit where the rotation angles for each gate are specified by the components of a classical input vector. The outputs from our neural network's previous layer will be collected and used as the inputs for our parametrized circuit. The measurement statistics of our quantum circuit can then be collected and used as inputs for the following hidden layer.
 
-* Silvia L. Ullo (University of Sannio) [<img align="center" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_silvia]
 
-### Installation
+<center><img src="imgs/interface.png" alt="drawing" width="300"/></center>
+
+
+In this study we created an Hybird Convolutional Neural Network, by adding a Quantum Circuit in a modified version of the Lenet-5
+
+
+![](imgs/model.png)
+
+## Results
+
+| Class                 | Precision | Recall | F1 Score |
+| :---                  |  :----:   | :----: |  :----:  |
+| Annual Crop           |    0.98   |  0.93  |   0.95   |
+| Permanent Crop        |    0.98   |  0.98  |   0.98   |
+| Pasture               |    0.93   |  0.94  |   0.94   |
+| Forest                |    0.95   |  0.95  |   0.95   |
+| Herbaceous vegetation |    0.93   |  0.94  |   0.94   |
+| Highway               |    0.99   |  0.99  |   0.99   |
+| Residential           |    0.99   |  0.99  |   0.99   |
+| Industrial            |    0.99   |  0.99  |   0.99   |
+| River                 |    0.99   |  0.99  |   0.99   |
+| Sea Lak               |    0.99   |  0.99  |   0.99   |
+|                       |           |        |          |
+| Accuracy              |           |        |   0.97   |
+| Macro Average         |    0.97   |  0.97  |   0.97   |
+
+## Folders organization
+
+### JSTARS
+We proposed a study on quantum circuits for image classification and several multiclass hybrid quantum classifiers. The experiments are collected in 
+
+- [QCNN-RyCircuitQiskittextbook.ipynb](JSTARS2021/quantum_classifiers/eurosat_classification/QCNN-RyCircuitQiskittextbook.ipynb)
+- [QCNN-RealAmplitudesCircuit.ipynb](JSTARS2021/quantum_classifiers/eurosat_classification/QCNN-RealAmplitudesCircuit.ipynb)
+- [eurosat_classification/QCNN-BellCircuit.ipynb](JSTARS2021/quantum_classifiers/eurosat_classification/QCNN-BellCircuit.ipynb)
+
+
+We also proposed an hierarchical quantum classifier, composed of coarse classifier for clustering the EuroSAT classes into three groups (Vegetation, Urban and Water Bodies) and of three fine grain classifiers. In this case the experiments are collected in 
+- [Jupyeter Notebook *QCNN-RealAmplitudesCircuit-CoarseClassifier.ipynb*](JSTARS2021/quantum_classifiers/fine_land_cover_classification/QCNN-RealAmplitudesCircuit-CoarseClassifier.ipynb) 
+- [Jupyeter Notebook *QCNN-RealAmplitudesCircuit-Group1.ipynb*](JSTARS2021/quantum_classifiers/fine_land_cover_classification/QCNN-RealAmplitudesCircuit-Group1.ipynb)
+- [Jupyeter Notebook *QCNN-RealAmplitudesCircuit-Group2.ipynb*](JSTARS2021/quantum_classifiers/fine_land_cover_classification/QCNN-RealAmplitudesCircuit-Group2.ipynb)
+- [Jupyeter Notebook *QCNN-RealAmplitudesCircuit-Group3.ipynb*](JSTARS2021/quantum_classifiers/fine_land_cover_classification/QCNN-RealAmplitudesCircuit-Group3.ipynb)
+
+### IGARSS2021
+
+We proposed several binary hybrid quantum classifiers for the EuroSAT dataset. The experiments are collected in the [Jupyeter Notebook *EuroSAT_Classification.ipynb*](QNN4EO/IGARSS2021/EuroSAT_Classification.ipynb)
+
+
+## Installation
 
 This module has been implemented in [Python 3.6.8](https://www.python.org/downloads/release/python-368/).
 
@@ -26,24 +72,45 @@ Then you can create a virtual environment:
     - Windows: `qnn4eo/Scripts/activate`
 5. install requirements: `pip install -r requirements.txt`
 6. launch Jupyter Lab: `jupyter lab`
-7. open *EuroSAT_Classification.ipynb*
 
 
-
-## Some results
-
-![](imgs/qnnVScnn.png)
+To run experiments on real Quantum Computers you have to create an [IBM Quantum Experience Account](https://quantum-computing.ibm.com/).
 
 
-#### Cite our paper
+## Authors:
+* Alessandro Sebastianelli (Univeristy of Sannio/ESA OSIP) [<img align="center" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_alessandro] [<img align="center" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"/>][github_alessandro]
+
+* Daniela A. Zaidenberg (MIT) [<img align="center" alt="codeSTACKr | LinkedIn" width="22px" padding="0px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/> ][linkedin_daniela] 
+
+* Dario Spiller (ASI/ESA) [<img align="center" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_dario] [<img align="center" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"/>][github_dario]
+
+* Bertrand Le Saux (ESA) [<img align="center" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_bertrand] [<img align="center" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"/>][github_bertrand]
+
+* Silvia L. Ullo (University of Sannio) [<img align="center" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> ][linkedin_silvia]
+
+
+## Cite our papers:
+
+### IGARSS2021
 
     @inproceedings{zaidenberg2021advantages,
         title={Advantages and Bottlenecks of Quantum Machine Learning for Remote Sensing},
         author={D. A. Zaidenberg, A. Sebastianelli, D. Spiller, B. Le Saux, S.L. Ullo},
-        booktitle={Submitted to IGARSS 2021-2021 IEEE International Geoscience and Remote Sensing Symposium},
+        booktitle={IGARSS 2021-2021 IEEE International Geoscience and Remote Sensing Symposium},
         year={2021},
         organization={IEEE}
     }
+
+### JSTARS - Special Issue on Quantum Computing for Earth Observation
+
+    @inproceedings{zaidenberg2021advantages,
+        title={On Circuit-based Hybrid Quantum Neural Networks for Remote Sensing Imagery Classification},
+        author={A. Sebastianelli, D. A. Zaidenberg, D. Spiller, B. Le Saux, S.L. Ullo},
+        booktitle={JSTARS},
+        year={2021},
+        organization={IEEE}
+    }
+
 
 [linkedin_daniela]: https://www.linkedin.com/in/daniela-zaidenberg-1b9918196/
 [linkedin_alessandro]: https://www.linkedin.com/in/alessandro-sebastianelli-58545915b/
