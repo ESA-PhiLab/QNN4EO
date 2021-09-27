@@ -53,7 +53,7 @@ We also proposed an hierarchical quantum classifier, composed of coarse classifi
 
 ### IGARSS2021
 
-We proposed several binary hybrid quantum classifiers for the EuroSAT dataset. The experiments are collected in the [Jupyeter Notebook *EuroSAT_Classification.ipynb*](QNN4EO/IGARSS2021/EuroSAT_Classification.ipynb)
+We proposed several binary hybrid quantum classifiers for the EuroSAT dataset. The experiments are collected in the [Jupyeter Notebook *EuroSAT_Classification.ipynb*](IGARSS2021/EuroSAT_Classification.ipynb)
 
 
 ## Installation
