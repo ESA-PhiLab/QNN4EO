@@ -55,6 +55,20 @@ We also proposed an hierarchical quantum classifier, composed of coarse classifi
 
 We proposed several binary hybrid quantum classifiers for the EuroSAT dataset. The experiments are collected in the [Jupyeter Notebook *EuroSAT_Classification.ipynb*](IGARSS2021/EuroSAT_Classification.ipynb)
 
+### IGARSS2021_in_2024
+
+We update the IGRAS2021 code in order to work with more recent PyTorch libraries. Moreover, a Docker image is provided. (from [lorenzopapa5](https://github.com/lorenzopapa5))
+
+To execute a main file (no need to follow Installation procedure) within a Docker container, use the following pseudocode to set up paths and options as needed:
+
+```bash
+docker run \
+    -v /path/to/your/project:/work/project/ \          # Maps local project directory to Docker
+    -v /path/to/your/dataset:/work/dataset/ \          # Maps local dataset directory to Docker
+    -v /path/to/save/results:/work/save_models/ \      # Maps save directory for results
+    -u user_id:group_id --ipc host --gpus all lorenzopapa5/cuda12.1.0-python3.8-pytorch2.4.0-esa /usr/bin/python3 /work/project/main_file.py \
+    --model_name <model_name> --c1 <class1> --c2 <class2>
+```
 
 ## Installation
 
